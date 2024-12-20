@@ -150,7 +150,7 @@ VCF;
         }
 
         if ($notes != '') {
-            $vCardData .= "\nNOTE:" . $notes;
+            $vCardData .= "\nNOTE:" . str_replace("\n", " ", $notes);
         }
 
         $vCardData .= "\nitem1.ADR;TYPE=HOME;TYPE=pref:;;" . $street . ";" . $city . ";" . $state . ";" . $zip . ";Australia";
